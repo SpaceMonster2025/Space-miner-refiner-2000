@@ -1,0 +1,5 @@
+{
+  "name": "Asteria: Deep Space Mining",
+  "description": "A meditative, top-down space mining simulation. Navigate asteroid fields, fracture celestial bodies, collect minerals, and upgrade your ship in a calm, recursive loop.",
+  "requestFramePermissions": []
+}
