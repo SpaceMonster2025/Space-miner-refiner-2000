@@ -252,13 +252,22 @@ const StationMenu: React.FC<StationMenuProps> = ({
                                     <div className="text-xs text-slate-400">Cargo</div>
                                     <div className="font-mono text-lg">{stock}</div>
                                 </div>
-                                <button
-                                    onClick={() => onSellRefined(m, 1, finalPrice)}
-                                    disabled={stock === 0}
-                                    className="px-4 py-2 bg-emerald-900/50 hover:bg-emerald-800 text-emerald-300 border border-emerald-700/50 rounded disabled:opacity-30 disabled:cursor-not-allowed"
-                                >
-                                    Sell 1
-                                </button>
+                                <div className="flex gap-2">
+                                  <button
+                                      onClick={() => onSellRefined(m, 1, finalPrice)}
+                                      disabled={stock === 0}
+                                      className="px-3 py-2 bg-emerald-900/50 hover:bg-emerald-800 text-emerald-300 border border-emerald-700/50 rounded disabled:opacity-30 disabled:cursor-not-allowed text-xs"
+                                  >
+                                      Sell 1
+                                  </button>
+                                  <button
+                                      onClick={() => onSellRefined(m, stock, finalPrice)}
+                                      disabled={stock === 0}
+                                      className="px-3 py-2 bg-emerald-900/50 hover:bg-emerald-800 text-emerald-300 border border-emerald-700/50 rounded disabled:opacity-30 disabled:cursor-not-allowed text-xs font-bold"
+                                  >
+                                      Sell All
+                                  </button>
+                                </div>
                                 </div>
                             </div>
                           )
